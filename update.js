@@ -6,20 +6,26 @@ function update() {
   $('cTier').innerHTML = 'C<br>';
   for (var i = 0; i<selectedArtists.length; i++) {
     for (const [key, value] of Object.entries(songs[selectedArtists[i]])) {
-      if (value == 'A') {
-        $('aTier').innerHTML += '<small>' + key + '</small><br>'
+      if (value.startsWith('AB')) {
+        if (value.slice(3) != '') {$('abTier').innerHTML += '<a href = "' + value.slice(3) + '">' + key + '</a><br>';}
+        else {$('abTier').innerHTML += '<a>' + key + '</a><br>';}
       }
-      if (value == 'AB') {
-        $('abTier').innerHTML += '<small>' + key + '</small><br>'
+      else if (value.startsWith('BC')) {
+        if (value.slice(3) != '') {$('bcTier').innerHTML += '<a href = "' + value.slice(3) + '">' + key + '</a><br>';}
+        else {$('bcTier').innerHTML += '<a>' + key + '</a><br>';}
       }
-      if (value == 'B') {
-        $('bTier').innerHTML += '<small>' + key + '</small><br>'
+      else if (value.startsWith('A')) {
+        if (value.slice(2) != '') {$('aTier').innerHTML += '<a href = "' + value.slice(2) + '">' + key + '</a><br>';}
+        else {$('aTier').innerHTML += '<a>' + key + '</a><br>';}
+        console.log(value.slice(2));
       }
-      if (value == 'BC') {
-        $('bcTier').innerHTML += '<small>' + key + '</small><br>'
-      }
-      if (value == 'C') {
-        $('cTier').innerHTML += '<small>' + key + '</small><br>'
+      else if (value.startsWith('B')) {
+        if (value.slice(2) != '') {$('bTier').innerHTML += '<a href = "' + value.slice(2) + '">' + key + '</a><br>';}
+        else {$('bTier').innerHTML += '<a>' + key + '</a><br>';}
+      } 
+      else if (value.startsWith('C')) {
+        if (value.slice(2) != '') {$('cTier').innerHTML += '<a href = "' + value.slice(2) + '">' + key + '</a><br>';}
+        else {$('cTier').innerHTML += '<a>' + key + '</a><br>';}
       }
     }
   }
