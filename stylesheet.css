@@ -1,0 +1,79 @@
+html {
+  overflow: scroll;
+   overflow-x: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color:white;
+  font-family:sans-sarif;
+  height: 3000px;
+  background-size:cover;
+}
+button {
+  background:#696969;
+  color: white;
+  border-radius: 5px;
+  height:25px;
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body {
+  background-color: #404040;
+  background-size:cover;
+  margin: 0;
+  margin-left:5px;
+  overflow: hidden;
+}
+#aTier {
+  position:absolute;
+  height:8000px;
+  width:150px;
+  top:5px;
+  left:150px;
+  background-color: #77fc03;
+  color:black;
+}
+#abTier {
+  position:absolute;
+  top:5px;
+  width:150px;
+  height:8000px;
+  left:300px;
+  background-color: #77e6f7;
+  color:black;
+}
+#bTier {
+  position:absolute;
+  left:450px;
+  top:5px;
+  height:8000px;
+  width:200px;
+  background-color: #dbfc03;
+  color:black;
+}
+#bcTier {
+  position:absolute;
+  left:600px;
+  top:5px;
+  height:8000px;
+  width:200px;
+  background-color: #fceb03;
+  color:black;
+}
+#cTier {
+  position:absolute;
+  height:8000px;
+  width:150px;
+  left:750px;
+  top:5px;
+  background-color: #fcc603;
+  color:black;
+}
+.artists {
+  opacity:0.5;
+}
