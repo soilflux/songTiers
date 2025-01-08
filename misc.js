@@ -11,3 +11,5 @@ function toggleArtist() {
   }
   update();
 }
+
+//for %i in (*.opus) do ffmpeg -i "%i" "%~ni.m4a"
